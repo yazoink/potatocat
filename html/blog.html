@@ -3,14 +3,46 @@
   <head>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
+    <script src='../js/get.js'></script>
     <script type="text/javascript" src="../json/blog.json"></script>
   </head>
   <body>
     <h1>Blog</h1>
-    <h2>All Entries:</h2>
+    <br />
+    <p><b>Categories: <a href='blog.html'>All Entries</a></b>
     <script>
-      var blog = JSON.parse(blog);
-      console.log(blog);
+      var categories = [];
+      for (var i = 0; i < blog.length; i++) {
+        for (var j = 0; j < blog[i].categories.length; j++) {
+          if (categories.includes(blog[i].categories[j]) == false) {
+            categories.push(blog[i].categories[j]);
+          }
+        } 
+      }
+      categories.sort();
+      for (var i = 0; i < categories.length; i++) {
+        document.write("<a href='blog.html?cat=" + categories[i] + "'>" + categories[i] + "</a> ");
+      }
+    </script>
+    </p>
+    <br />
+    <script>
+      if ("cat" in get) {
+        document.write("<h1>" + get['cat'] + "</h1>")
+        document.write("<ul>")
+        for (var i = 0; i < blog.length; i++) {
+          if (blog[i].categories.includes(get['cat']) == true) {
+            document.write("<li><a href='blog-entry.html?entry=" + blog[i].entry + "'>" + blog[i].title + "</a></li>");
+          }
+        }
+      } else {
+        document.write("<h1>All Entries</h1>");
+        document.write("<ul>")
+        for (var i = 0; i < blog.length; i++) {
+          document.write("<li><a href='blog-entry.html?entry=" + blog[i].entry + "'>" + blog[i].title + "</a></li>");
+        }
+      }
+      document.write("</ul>")
     </script>
     <br />
   </body>

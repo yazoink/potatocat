@@ -73,6 +73,10 @@ h3, .highlight3 {
   text-align: end;
 }
 
+.align-center {
+  text-align: center;
+}
+
 /* button {
   background-color: var(--bg);
   font-family: terminus;

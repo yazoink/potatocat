@@ -5,14 +5,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>&#10022; potatocat &#10022;</title>
-    <script>
-      var parts = window.location.search.substr(1).split("&");
-      var get = {};
-      for (var i = 0; i < parts.length; i++) {
-        var temp = parts[i].split("=");
-        get[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
-      }
-    </script>
+    <script src='js/get.js'></script>
   </head>
   <body>
     <div class='container'>
@@ -46,7 +39,13 @@
               document.getElementById('content-iframe').src='html/art.html';
               break;
             case 'blog':
-              document.getElementById('content-iframe').src='html/blog.html';
+              if ("cat" in get) {
+                document.getElementById('content-iframe').src=`html/blog.html?cat=${get['cat']}`;
+              } else if ("entry" in get) {
+                document.getElementById('content-iframe').src=`html/blog-entry.html?entry=${get['entry']}`;
+              } else {
+                document.getElementById('content-iframe').src='html/blog.html';
+              }
               break;
             default:
               break;

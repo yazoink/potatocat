@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/iframe.css" />
+    <script src='../js/get.js'></script>
+    <script type="text/javascript" src="../json/blog.json"></script>
+  </head>
+  <body>
+    <br />
+    <p><a href='blog.html'>&#11176; Back</a></p>
+    <script>
+      var i;
+      for (i = 0; i < blog.length; i++) {
+        if (blog[i].entry == get['entry']) {
+          break;
+        }
+      }
+      document.write("<h1>" + blog[i].title + "</h1>");
+      document.write("<h2>" + blog[i].subheading + "</h2>");
+      document.write("<p><i>" + blog[i].datePublished + "</i></p>");
+      document.write("<br />");
+      for (var j = 0; j < blog[i].content.length; j++) {
+        document.write(blog[i].content[j]);
+      }
+    </script>
+    <br />
+  </body>
+</html>

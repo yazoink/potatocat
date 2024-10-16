@@ -2,10 +2,21 @@
   blog = [
     {
       "title": "Example Blog Entry",
-      "entry": 1,
+      "entry": "example-blog-entry",
       "subheading": "This is a blog post",
-      "date": "16 October 2024",
-      "categories": ["category1", "category2"],
+      "datePublished": "16 October 2024",
+      "categories": ["Category1", "Category2"],
+      "content": [
+        "<p>This is a paragraph.</p>",
+        "<p>This is another paragraph.</p>"
+      ]
+    },
+    {
+      "title": "Example Blog Entry 2",
+      "entry": "example-blog-entry-2",
+      "subheading": "This is another blog post",
+      "datePublished": "16 October 2024",
+      "categories": ["Category2", "Category3"],
       "content": [
         "<p>This is a paragraph.</p>",
         "<p>This is another paragraph.</p>"
