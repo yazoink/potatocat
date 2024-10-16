@@ -43,8 +43,6 @@ body {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .navbar-side {
@@ -67,10 +65,9 @@ body {
 .content iframe {
   width: 100%;
   height: 100%;
-  padding-right: 2px;
+  padding-right: var(--scrollbar-padding);
   overflow: scroll;
   border: none;
-  padding-right: 2px;
 }
 
 .content-side {

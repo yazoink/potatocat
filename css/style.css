@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-color: var(--fg2) var(--bg);
-  scrollbar-width: 1px;
+  scrollbar-width: thin;
 }
 
 body {
@@ -17,12 +17,9 @@ body {
 }
 
 ul {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
   list-style-type: "✦ ";
   padding-left: var(--list-padding);
+  padding-right: var(--list-padding);
 }
 
 li::marker {
@@ -36,13 +33,6 @@ p, h1, h2, h3 {
 
 a {
   color: var(--h2);
-}
-
-p, a {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 h1, h2, h3, h4 {

@@ -8,9 +8,8 @@
   --h3: #817396;
 
   /* ---- PADDING ---- */
-  --side-padding: 10px;
-  --scrollbar-width: 1px;
+  --side-padding: 15px;
   --scrollbar-padding: 2px;
-  --list-padding: 30px;
+  --list-padding: 40px;
 }
 
