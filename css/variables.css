@@ -1,0 +1,16 @@
+:root {
+  /* ---- COLORS ---- */
+  --fg: #efdfd2;
+  --fg2: #e4bfb6;
+  --bg: #4f3445;
+  --h1: #a4b5c5;
+  --h2: #be9cc1;
+  --h3: #817396;
+
+  /* ---- PADDING ---- */
+  --side-padding-p: 10px;
+  --scrollbar-width: 1px;
+  --scrollbar-padding: 2px;
+  --list-padding: 30px;
+}
+
