@@ -17,9 +17,14 @@
       }
       document.write("<p><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='../index.html/nav=blog&entry=" + get['entry'] + "' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
 
-      function copyURL() {
+      const delay = ms => new Promise(res => setTimeout(res, ms));
+
+      const copyURL = async () => {
         url = `${window.location.hostname}/index.html?nav=blog&entry=${get['entry']}`;
         navigator.clipboard.writeText(url);
+        document.getElementById("copy-url").innerHTML = "&#x2398; Copied!"; 
+        await delay(2000);
+        document.getElementById("copy-url").innerHTML = "&#x2398; Copy URL"; 
       }
 
       document.write("<h1>" + blog[i].title + "</h1>");
