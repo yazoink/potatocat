@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Art</h1>
+    <h2>this is gonna be a gallery or smth</h2>
+    <p>Click on images for full view.</p>
+    <br />
+    <p>
+    <a href='../images/art/full/art1.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art1.webp' /></a>
+    <a href='../images/art/full/art2.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art2.webp' /></a>
+    <a href='../images/art/full/art3.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art3.webp' /></a>
+    </p>
+    <script>
+      const images = document.querySelectorAll('.artwork');
+      images.forEach(image => {
+        image.addEventListener('mouseover', () => {
+          var rotation = Math.floor(Math.random() * 4)
+              switch(rotation) {
+                case 1:
+                  image.style.transform = 'rotate(2deg)';
+                  break;
+                case 2:
+                  image.style.transform = 'rotate(-2deg)';
+                  break;
+                case 3:
+                  image.style.transform = 'rotate(1deg)';
+                  break;
+                case 4:
+                  image.style.transform = 'rotate(-1deg)';
+                  break;
+                default:
+                  break;
+              }  
+        })
+          
+        image.addEventListener('click', () => {
+          window.open(image.src, '_blank');
+        })
+        image.addEventListener('mouseout', () => {
+          image.style.transform = 'scale(1)';
+        })
+      })
+    </script>
+  </body>
+</html>

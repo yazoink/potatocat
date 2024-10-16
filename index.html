@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&#10022; potatocat &#10022;</title>
+    <script>
+      var parts = window.location.search.substr(1).split("&");
+      var get = {};
+      for (var i = 0; i < parts.length; i++) {
+        var temp = parts[i].split("=");
+        get[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+      }
+    </script>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+        <a href='index.html'><img class='header-img' src="images/logo.webp" /></a>
+      </div>
+      <div class='navbar'>
+        <h1>Navigation</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html?nav=about">About</a></li>
+          <li><a href="index.html?nav=art">Art</a></li>
+          <li><a href="index.html?nav=blog">Blog</a></li>
+        </ul>
+        <br />
+        <h1>Socials</h1>
+        <ul>
+          <li><a href="https://twitter.com/potatowocat" target="_blank">Twitter</a></li>
+          <li><a href="https://ko-fi.com/potatocat73467" target="_blank">Ko-fi</a></li>
+        </ul>
+      </div>
+      <div class='navbar-side'></div>
+      <div class='content'>
+        <iframe id="content-iframe" src="html/home.html"></iframe>
+        <script>
+          switch(get['nav']) {
+            case 'about':
+              document.getElementById('content-iframe').src='html/about.html';
+              break;
+            case 'art':
+              document.getElementById('content-iframe').src='html/art.html';
+              break;
+            case 'blog':
+              document.getElementById('content-iframe').src='html/blog.html';
+              break;
+            default:
+              break;
+          }
+        </script>
+      </div>
+      <div class='content-side'></div>
+      <div class="footer">
+        <p><span class='highlight1'>potatocat</span> <span class='foreground2'>&#10022;</span> <span class='highlight2'>2024</span></p>
+      </div>
+      <div class='content-bottom'></div>
+    </div>
+  </body>
+</html>
