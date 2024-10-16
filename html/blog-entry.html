@@ -23,6 +23,12 @@
       for (var j = 0; j < blog[i].content.length; j++) {
         document.write(blog[i].content[j]);
       }
+      document.write("<br />");
+      document.write("<p><b>Categories: </b>");
+      for (var j = 0; j < blog[i].categories.length; j++) {
+        document.write("<a href='../index.html?nav=blog&cat=" + blog[i].categories[j] + "' target='_top'>" + blog[i].categories[j] + "</a> ");
+      }
+      document.write("</p>");
     </script>
     <br />
   </body>
