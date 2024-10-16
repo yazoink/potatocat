@@ -9,7 +9,7 @@
   <body>
     <h1>Blog</h1>
     <br />
-    <p><b>Categories: <a href='blog.html'>All Entries</a></b>
+    <p><b>Categories: <a href='../index.html?nav=blog' target="_top">All Entries</a></b>
     <script>
       var categories = [];
       for (var i = 0; i < blog.length; i++) {
@@ -21,7 +21,7 @@
       }
       categories.sort();
       for (var i = 0; i < categories.length; i++) {
-        document.write("<a href='blog.html?cat=" + categories[i] + "'>" + categories[i] + "</a> ");
+        document.write("<a href='../index.html?nav=blog&cat=" + categories[i] + "' target='_top'>" + categories[i] + "</a> ");
       }
     </script>
     </p>
@@ -32,14 +32,14 @@
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
           if (blog[i].categories.includes(get['cat']) == true) {
-            document.write("<li><a href='blog-entry.html?entry=" + blog[i].entry + "'>" + blog[i].title + "</a></li>");
+            document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + "</a></li>");
           }
         }
       } else {
         document.write("<h1>All Entries</h1>");
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
-          document.write("<li><a href='blog-entry.html?entry=" + blog[i].entry + "'>" + blog[i].title + "</a></li>");
+          document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + "</a></li>");
         }
       }
       document.write("</ul>")

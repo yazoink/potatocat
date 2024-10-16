@@ -8,7 +8,6 @@
   </head>
   <body>
     <br />
-    <p><a href='blog.html'>&#11176; Back</a></p>
     <script>
       var i;
       for (i = 0; i < blog.length; i++) {
@@ -16,6 +15,7 @@
           break;
         }
       }
+      document.write("<p><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a href='../index.html/nav=blog&entry=" + get['entry'] + "' target='_top'>&#x2398; Share</a></p>")
       document.write("<h1>" + blog[i].title + "</h1>");
       document.write("<h2>" + blog[i].subheading + "</h2>");
       document.write("<p><i>" + blog[i].datePublished + "</i></p>");
