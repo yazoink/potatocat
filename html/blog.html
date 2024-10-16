@@ -3,11 +3,15 @@
   <head>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
+    <script type="text/javascript" src="../json/blog.json"></script>
   </head>
   <body>
     <h1>Blog</h1>
-    <h2>this is gonna be a blog</h2>
-    <p>wip</p>
+    <h2>All Entries:</h2>
+    <script>
+      var blog = JSON.parse(blog);
+      console.log(blog);
+    </script>
     <br />
   </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  blog = [
+    {
+      "title": "Example Blog Entry",
+      "entry": 1,
+      "subheading": "This is a blog post",
+      "date": "16 October 2024",
+      "categories": ["category1", "category2"],
+      "content": [
+        "<p>This is a paragraph.</p>",
+        "<p>This is another paragraph.</p>"
+      ]
+    }
+  ]
+}
