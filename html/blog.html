@@ -32,14 +32,14 @@
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
           if (blog[i].categories.includes(get['cat']) == true) {
-            document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + "</a></li>");
+              document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
           }
         }
       } else {
         document.write("<h1>All Entries</h1>");
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
-          document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + "</a></li>");
+          document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
         }
       }
       document.write("</ul>")
