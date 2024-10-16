@@ -1,8 +1,9 @@
 p {
-  padding-right: 12px;
+  padding-right: calc(var(--side-padding) + var(--scrollbar-padding));
 }
 
 .artwork {
   border: 1px solid var(--fg2);
   margin: 5px;
+  width: 211px;
 }
