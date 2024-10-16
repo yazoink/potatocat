@@ -29,8 +29,16 @@ li::marker {
   color: var(--fg2);
 }
 
+p, h1, h2, h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 a {
   color: var(--h2);
+}
+
+p, a {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 0;
@@ -61,20 +69,8 @@ h3, .highlight3 {
   color: var(--fg2);
 }
 
-p {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .align-right {
   text-align: end;
-}
-
-.artwork {
-  border: 1px solid var(--fg2);
-  margin: 5px;
 }
 
 /* button {
