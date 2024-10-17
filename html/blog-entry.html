@@ -23,7 +23,7 @@
         url = `${window.location.hostname}/index.html?nav=blog&entry=${get['entry']}`;
         navigator.clipboard.writeText(url);
         document.getElementById("copy-url").innerHTML = "&#x2398; Copied!"; 
-        await delay(2000);
+        await delay(1000);
         document.getElementById("copy-url").innerHTML = "&#x2398; Copy URL"; 
       }
 
