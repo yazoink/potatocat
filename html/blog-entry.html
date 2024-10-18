@@ -7,7 +7,6 @@
     <script type="text/javascript" src="../json/blog.json"></script>
   </head>
   <body>
-    <br />
     <script>
       var i;
       for (i = 0; i < blog.length; i++) {
@@ -15,7 +14,7 @@
           break;
         }
       }
-      document.write("<p><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='../index.html/nav=blog&entry=" + get['entry'] + "' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
+      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='../index.html/nav=blog&entry=" + get['entry'] + "' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
 
       const delay = ms => new Promise(res => setTimeout(res, ms));
 

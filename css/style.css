@@ -43,6 +43,10 @@ h1, h2, h3, h4 {
   padding-bottom: 0;
 }
 
+.top-text {
+  padding-top: var(--top-padding);
+}
+
 h1, .highlight1 {
   color: var(--h1);
 }
