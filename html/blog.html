@@ -4,29 +4,20 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
     <script src='../js/get.js'></script>
+    <script src='../js/rss.js'></script>
     <script type="text/javascript" src="../blog/blog.js"></script>
   </head>
   <body>
     <script>
-      get = getGET(parent.window.location)
+      const get = getGET(parent.window.location);
+      const rssXML = getRSS(blog);
+      const blob = new Blob([rssXML], { type: 'application/rss+xml; charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'rss.xml';
     </script>
     <h1 class='top-text'>Blog</h1>
-    <br />
-    <p><b>Categories: <a href='../index.html?nav=blog' target="_top">All Entries</a></b>
-    <script>
-      var categories = [];
-      for (var i = 0; i < blog.length; i++) {
-        for (var j = 0; j < blog[i].categories.length; j++) {
-          if (categories.includes(blog[i].categories[j]) == false) {
-            categories.push(blog[i].categories[j]);
-          }
-        } 
-      }
-      categories.sort();
-      for (var i = 0; i < categories.length; i++) {
-        document.write("<a href='../index.html?nav=blog&cat=" + categories[i] + "' target='_top'>" + categories[i] + "</a> ");
-      }
-    </script>
+    <p><a href='javascript:;' onclick='link.click()'><img src='/images/rss.webp'></img>RSS</a></p>
     </p>
     <br />
     <script>
@@ -52,5 +43,22 @@
       document.write("</ul>")
     </script>
     <br />
+    <p class='hr'><hr /></p>
+    <br />
+    <p><b>Categories: <a href='../index.html?nav=blog' target="_top">All Entries</a></b>
+    <script>
+      var categories = [];
+      for (var i = 0; i < blog.length; i++) {
+        for (var j = 0; j < blog[i].categories.length; j++) {
+          if (categories.includes(blog[i].categories[j]) == false) {
+            categories.push(blog[i].categories[j]);
+          }
+        } 
+      }
+      categories.sort();
+      for (var i = 0; i < categories.length; i++) {
+        document.write("<a href='../index.html?nav=blog&cat=" + categories[i] + "' target='_top'>" + categories[i] + "</a> ");
+      }
+    </script>
   </body>
 </html>

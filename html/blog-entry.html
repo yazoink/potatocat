@@ -5,11 +5,17 @@
     <link rel="stylesheet" href="../css/iframe.css" />
     <script src='../js/get.js'></script>
     <script src='../js/include.js'></script>
+    <script src='../js/rss.js'></script>
     <script type="text/javascript" src="../blog/blog.js"></script>
   </head>
   <body>
     <script>
-      get = getGET(parent.window.location)
+      const get = getGET(parent.window.location);
+      const rssXML = getRSS(blog);
+      const blob = new Blob([rssXML], { type: 'application/rss+xml; charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'rss.xml';
       var i;
       var entry;
       for (i = 0; i < blog.length; i++) {
@@ -19,7 +25,7 @@
           break;
         }
       }
-      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
+      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a href='javascript:;' onclick='link.click()'><img src='/images/rss.webp'></img>RSS</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
 
       const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -36,6 +42,8 @@
       document.write("<p><i>" + blog[i].datePublished + "</i></p>");
       document.write("<br />");
       document.write("<div class='blog-entry-content'></div>");
+      document.write("<br />");
+      document.write("<p class='hr'><hr /></p>");
       document.write("<br />");
       document.write("<p><b>Categories: </b>");
       for (var j = 0; j < blog[i].categories.length; j++) {

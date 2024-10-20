@@ -68,6 +68,20 @@ h3, .highlight3 {
   color: var(--h3);
 }
 
+hr {
+  width: calc(
+    var(--content-width)
+    - var(--scrollbar-padding)
+    - var(--side-padding) * 2
+  );
+  border-top: 1px dashed var(--fg2);
+  border-bottom: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+  border-right: 1px dashed transparent;
+  margin-left: var(--side-padding);
+  margin-right: calc(var(--side-padding) + var(--scrollbar-padding));
+}
+
 .foreground2 {
   color: var(--fg2);
 }
