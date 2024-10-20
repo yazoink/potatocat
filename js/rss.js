@@ -47,3 +47,8 @@ function getRSS(blog, rss) {
   `;
   return rssXML;
 }
+/* const rssXML = getRSS(blog, rss);
+const blob = new Blob([rssXML], { type: 'application/rss+xml; charset=utf-8' });
+const link = document.createElement('a');
+link.href = URL.createObjectURL(blob);
+link.download = 'rss.xml'; */

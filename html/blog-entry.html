@@ -5,27 +5,21 @@
     <link rel="stylesheet" href="../css/iframe.css" />
     <script src='../js/get.js'></script>
     <script src='../js/include.js'></script>
-    <script src='../js/rss.js'></script>
     <script type="text/javascript" src="../blog/blog.js"></script>
   </head>
   <body>
     <script>
       const get = getGET(parent.window.location);
-      const rssXML = getRSS(blog, rss);
-      const blob = new Blob([rssXML], { type: 'application/rss+xml; charset=utf-8' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'rss.xml';
       var i;
       var entry;
-      for (i = 0; i < blog.length; i++) {
-        entry = blog[i].title.replace(/ /g, "-");
+      for (i = 0; i < blogPosts.length; i++) {
+        entry = blogPosts[i].title.replace(/ /g, "-");
         entry = entry.toLowerCase();
         if (entry == get['entry']) {
           break;
         }
       }
-      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a href='javascript:;' onclick='link.click()'><img src='/images/rss.webp'></img>RSS</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
+      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
 
       const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -37,17 +31,17 @@
         document.getElementById("copy-url").innerHTML = "&#x2398; Copy URL"; 
       }
 
-      document.write("<h1>" + blog[i].title + "</h1>");
-      document.write("<h2>" + blog[i].subheading + "</h2>");
-      document.write("<p><i>" + blog[i].datePublished + "</i></p>");
+      document.write("<h1>" + blogPosts[i].title + "</h1>");
+      document.write("<h2>" + blogPosts[i].subheading + "</h2>");
+      document.write("<p><i>" + blogPosts[i].datePublished + "</i></p>");
       document.write("<br />");
       document.write("<div class='blog-entry-content'></div>");
       document.write("<br />");
       document.write("<p class='hr'><hr /></p>");
       document.write("<br />");
       document.write("<p><b>Categories: </b>");
-      for (var j = 0; j < blog[i].categories.length; j++) {
-        document.write("<a href='../index.html?nav=blog&cat=" + blog[i].categories[j] + "' target='_top'>" + blog[i].categories[j] + "</a> ");
+      for (var j = 0; j < blogPosts[i].categories.length; j++) {
+        document.write("<a href='../index.html?nav=blog&cat=" + blogPosts[i].categories[j] + "' target='_top'>" + blogPosts[i].categories[j] + "</a> ");
       }
       document.write("</p>");
       include("../blog/posts/" + entry + ".html", ".blog-entry-content");

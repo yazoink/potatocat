@@ -9,6 +9,7 @@
     var(--content-width)
     - calc(var(--side-padding) * 2)
     - var(--scrollbar-padding)
+    - var(--scrollbar-width)
   );
   border: 1px solid var(--fg2);
 }

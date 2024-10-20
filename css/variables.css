@@ -12,6 +12,7 @@
   --top-padding: 10px;
   --list-padding: 40px;
   --scrollbar-padding: 3px;
+  --scrollbar-width: 7px;
 
   /* ---- GRID LAYOUT ---- */
   --row-gap: 10px;

@@ -3,18 +3,25 @@
   <head>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
+    <script type="text/javascript" src="/gallery/gallery.js"></script>
   </head>
   <body>
     <h1 class='top-text'>Art</h1>
-    <h2>this is gonna be a gallery or smth</h2>
-    <p>Click on images for full view.</p>
+    <h2><script>
+        document.write(artGallery.subheading);
+    </script></h2>
+    <p><script>
+        document.write(artGallery.description);
+    </script></p>
     <br />
     <p class='hr'><hr /></p>
     <br />
     <p class='align-center'>
-    <a href='../images/art/full/art1.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art1.webp'></img></a>
-    <a href='../images/art/full/art2.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art2.webp' ></img></a>
-    <a href='../images/art/full/art3.webp' target='_blank'><img class='artwork' src='../images/art/thumbnails/art3.webp' /></img></a>
+    <script>
+      for (var i = 0; i < artGalleryImages.length; i++) {
+        document.write("<a href='/gallery/art/full/" + artGalleryImages[i] + "' target='_blank'><img src='/gallery/art/thumbnails/" + artGalleryImages[i] + "' class='artwork'></img></a>");
+      }
+    </script>
     </p>
     <br />
     <script>

@@ -1,0 +1,156 @@
+-------- NOTES --------
+The only files you'll need to edit are in the "blog", "gallery" and 
+"configurations" folders.
+
+
+---- HTML ----
+The blog posts need to be written in HTML so here's a quick reference:
+
+- To write a paragraph:
+  <p>paragraph contents</p>
+
+- Add a line break:
+  <br />
+
+- Make text bold:
+  <b>bold text</b>
+
+- Make text italic:
+  <i>italic text</i>
+
+- Bold italic text:
+  <b><i>bold itaic text</i></b>
+
+- Add a link:
+  <a href='https://website.com'>link text</a>
+
+- Link that opens in a new tab (I always use this unless it's a navbar link):
+  <a href='https://website.com' target='_blank'>link text</a>
+
+- Horizontal line across the page:
+  It's usually just 
+  <hr /> 
+
+  but to make it use the site's theme use 
+  <p class='hr'><hr /></p>
+
+- Add an image:
+  <img src='/path/to/image.jpg'></img>
+
+  The path of the image is from the start of the website folder, so if 
+  "image.jpg" is in the "images" folder in the "blog" folder, it would be 
+  "/blog/images/image.jpg"
+  
+  I would also suggest sizing images down as much as you can and/or converting 
+  them to WEBP to make sure they load quickly.
+
+  The maximum width an image can display at in a blog post is 498px, so I'd
+  suggest sizing it down to that.
+
+- Open an image in a new tab by clicking it:
+  <a href='/path/to/image.jpg' target='_blank'>
+    <img src='/path/to/image.jpg'></img>
+  </a>
+
+- Use a lower resolution image on the page, but open a higher 
+  resolution image when clicked:
+  <a href='/path/to/full/resolution/image.jpg' target='_blank'>
+    <img src='/path/to/downscaled/image.jpg'></img>
+  </a>
+
+- Unordered/bullet list:
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+
+- Ordered/numbered list:
+  <ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ol>
+
+
+---- BLOG ----
+To make a blog post:
+
+1. Open the "blog.js" file in the "blog" folder with Notepad++ or VsCode.
+
+2. There will be a Javascript variable that looks like this:
+
+  const blogPosts = [
+    {
+      "title": "Example Blog Entry 2",
+      "subheading": "This is another blog post",
+      "datePublished": "17/10/2024",
+      "categories": ["Category2", "Category3"]
+    },
+    {
+      "title": "Example Blog Entry",
+      "subheading": "This is a blog post",
+      "datePublished": "16/10/2024",
+      "categories": ["Category1", "Category2"]
+    }
+  ]
+
+  It's pretty self-explanatory, just add the info about the post you wanna 
+  make. It reads from top-to-bottom, top being the most recent, so make sure 
+  it's at the top. Also make sure the syntax matches exactly, or else it won't 
+  work.
+
+  The most important things to remember when writing to that file are; 
+  every post except for the last should have a comma after the curly brackets 
+  and double quotes and backslashes inside the text need to be written as 
+  \" and \\.
+
+3. make a new file in the "blog/posts" folder. If your post is called "A Blog 
+  Post", the file should be called "a-blog-post.html" (replacing spaces with 
+  hyphens and capital letters with lowercase).
+
+4. Write the HTML for your post in that file. There are already some examples, 
+  which can safely be left there without showing up on the site, as long as 
+  they're not in "blog.js".
+
+To edit the text under the heading, edit the "blogDescription" variable in 
+"blog.js".
+
+
+---- ART GALLERY ----
+To add art to the gallery:
+
+1. Put the full resolution version of the image in "/gallery/art/full"
+2. Put a downscaled image with the same name in "/gallery/art/thumbnails"
+3. Open "/gallery/gallery.js" and find the "artGalleryImages" variable:
+  
+  const artGalleryImages = [
+    "art1.webp",
+    "art2.webp",
+    "art3.webp"
+  ]
+
+  Add the name of the image (it will display the image at the top first).
+
+You can the subtitle and text on the gallery page by changing the values under the 
+"artGallery" variable (also in "/gallery/gallery.js").
+
+
+---- NAVBAR ----
+To edit the social links on the navbar:
+
+Open "/configurations/configurations.js". There will be a "socials" 
+variable like this:
+
+const socials = [
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/potatowocat"
+  },
+  {
+    "name": "Ko-fi",
+    "url": "https://ko-fi.com/potatocat73467"
+  }
+]
+
+Add/remove/edit what you want there.

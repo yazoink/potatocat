@@ -3,41 +3,38 @@
   <head>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
-    <script src='../js/get.js'></script>
-    <script src='../js/rss.js'></script>
-    <script type="text/javascript" src="../blog/blog.js"></script>
+    <script src='/js/get.js'></script>
+    <script type="text/javascript" src="/blog/blog.js"></script>
   </head>
   <body>
-    <script>
+     <script>
       const get = getGET(parent.window.location);
-      const rssXML = getRSS(blog, rss);
-      const blob = new Blob([rssXML], { type: 'application/rss+xml; charset=utf-8' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'rss.xml';
     </script>
     <h1 class='top-text'>Blog</h1>
-    <p><a href='javascript:;' onclick='link.click()'><img src='/images/rss.webp'></img>RSS</a></p>
+    <p>
+      <script>
+        document.write(blogDescription);
+      </script>
     </p>
     <br />
     <script>
       if ("cat" in get) {
         document.write("<h1>" + get['cat'] + "</h1>")
         document.write("<ul>")
-        for (var i = 0; i < blog.length; i++) {
-          var entry = blog[i].title.replace(/ /g, "-");
+        for (var i = 0; i < blogPosts.length; i++) {
+          var entry = blogPosts[i].title.replace(/ /g, "-");
           entry = entry.toLowerCase();
-          if (blog[i].categories.includes(get['cat']) == true) {
-              document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
+          if (blogPosts[i].categories.includes(get['cat']) == true) {
+              document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blogPosts[i].title + " - " + blogPosts[i].datePublished + "</a></li>");
           }
         }
       } else {
         document.write("<h1>All Entries</h1>");
         document.write("<ul>")
-        for (var i = 0; i < blog.length; i++) {
-          var entry = blog[i].title.replace(/ /g, "-");
+        for (var i = 0; i < blogPosts.length; i++) {
+          var entry = blogPosts[i].title.replace(/ /g, "-");
           entry = entry.toLowerCase();
-          document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
+          document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blogPosts[i].title + " - " + blogPosts[i].datePublished + "</a></li>");
         }
       }
       document.write("</ul>")
@@ -48,10 +45,10 @@
     <p><b>Categories: <a href='../index.html?nav=blog' target="_top">All Entries</a></b>
     <script>
       var categories = [];
-      for (var i = 0; i < blog.length; i++) {
-        for (var j = 0; j < blog[i].categories.length; j++) {
-          if (categories.includes(blog[i].categories[j]) == false) {
-            categories.push(blog[i].categories[j]);
+      for (var i = 0; i < blogPosts.length; i++) {
+        for (var j = 0; j < blogPosts[i].categories.length; j++) {
+          if (categories.includes(blogPosts[i].categories[j]) == false) {
+            categories.push(blogPosts[i].categories[j]);
           }
         } 
       }
