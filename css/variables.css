@@ -11,5 +11,14 @@
   --side-padding: 15px;
   --top-padding: 10px;
   --list-padding: 40px;
+  --scrollbar-padding: 2px;
+  --left-side-width: 157px;
+  --navbar-width: 193px;
+  --content-width: 535px;
+  --right-side-width: 157px;
+  --header-height: 252px;
+  --content-height: 545px;
+  --footer-height: 45px;
+  --page-bottom-height: 373px;
 }
 

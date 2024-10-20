@@ -8,6 +8,9 @@
     <script src='js/get.js'></script>
   </head>
   <body>
+    <script>
+      get = getGET(window.location)
+    </script>
     <div class='container'>
       <div class='header'>
         <a href='index.html'><img class='header-img' src="images/logo.webp" /></a>
@@ -39,10 +42,8 @@
               document.getElementById('content-iframe').src='html/art.html';
               break;
             case 'blog':
-              if ("cat" in get) {
-                document.getElementById('content-iframe').src=`html/blog.html?cat=${get['cat']}`;
-              } else if ("entry" in get) {
-                document.getElementById('content-iframe').src=`html/blog-entry.html?entry=${get['entry']}`;
+              if ("entry" in get) {
+                document.getElementById('content-iframe').src=`html/blog-entry.html`;
               } else {
                 document.getElementById('content-iframe').src='html/blog.html';
               }

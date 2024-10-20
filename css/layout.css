@@ -14,8 +14,16 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 157px 193px 535px 157px;
-  grid-template-rows: 252px 545px 45px 373px;
+  grid-template-columns: 
+    var(--left-side-width)
+    var(--navbar-width)
+    var(--content-width)
+    var(--right-side-width);
+  grid-template-rows:
+    var(--header-height)
+    var(--content-height) 
+    var(--footer-height)
+    var(--page-bottom-height);
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -58,8 +66,6 @@ body {
   grid-column: 3;
   grid-row: 2;
   background-image: url(../images/content-bg.webp);
-  overflow-y: scroll;
-  padding-right: var(--scrollbar-padding);
 }
 
 .content-side {
@@ -81,4 +87,12 @@ body {
   grid-column-end: 4;
   grid-row: 4;
   background-image: url(../images/tiger.webp);
+}
+
+.content iframe {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: var(--scrollbar-padding);
+  border: none;
 }
