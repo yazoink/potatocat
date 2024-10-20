@@ -134,7 +134,9 @@ To edit the text under the heading, edit the "blogDescription" variable in
 To add art to the gallery:
 
 1. Put the full resolution version of the image in "/gallery/art/full"
+
 2. Put a downscaled image with the same name in "/gallery/art/thumbnails"
+
 3. Open "/gallery/gallery.js" and find the "artGalleryImages" variable:
   
   const artGalleryImages = [
@@ -167,3 +169,7 @@ const socials = [
 ]
 
 Add/remove/edit what you want there.
+
+---- HOME/ABOUT PAGES ----
+You can edit the home/about pages by editing the 
+"/configuration/pages/home.html" and "/configuration/pages/about.html" files.
