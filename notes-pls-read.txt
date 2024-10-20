@@ -52,6 +52,10 @@ The blog posts need to be written in HTML so here's a quick reference:
 - Add an image:
   <img src='/path/to/image.jpg'></img>
 
+  for blog posts, make sure to add them to the "blog-img" class;
+
+  <img src='/path/to/image.jpg' class='blog-img'></img>
+
   The path of the image should be from the website folder, so if "image.jpg" is 
   in the "images" folder in the "blog" folder, it would be 
   "/blog/images/image.jpg"
