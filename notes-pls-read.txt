@@ -170,6 +170,7 @@ const socials = [
 
 Add/remove/edit what you want there.
 
+
 ---- HOME/ABOUT PAGES ----
 You can edit the home/about pages by editing the 
 "/configuration/pages/home.html" and "/configuration/pages/about.html" files.
