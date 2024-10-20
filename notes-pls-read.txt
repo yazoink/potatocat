@@ -89,6 +89,11 @@ The blog posts need to be written in HTML so here's a quick reference:
     <li>List item 3</li>
   </ol>
 
+- Headings:
+  <h1>Heading</h1>
+  <h2>Subheading</h2>
+  <h3>Sub-subheading</h3>
+
 
 ---- BLOG ----
 To make a blog post:
