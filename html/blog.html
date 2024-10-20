@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
     <script src='../js/get.js'></script>
-    <script type="text/javascript" src="../json/blog.json"></script>
+    <script type="text/javascript" src="../blog/blog.json"></script>
   </head>
   <body>
     <h1 class='top-text'>Blog</h1>
@@ -31,15 +31,19 @@
         document.write("<h1>" + get['cat'] + "</h1>")
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
+          var entry = blog[i].title.replace(/ /g, "-");
+          entry = entry.toLowerCase();
           if (blog[i].categories.includes(get['cat']) == true) {
-              document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
+              document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
           }
         }
       } else {
         document.write("<h1>All Entries</h1>");
         document.write("<ul>")
         for (var i = 0; i < blog.length; i++) {
-          document.write("<li><a href='../index.html?nav=blog&entry=" + blog[i].entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
+          var entry = blog[i].title.replace(/ /g, "-");
+          entry = entry.toLowerCase();
+          document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blog[i].title + " - " + blog[i].datePublished + "</a></li>");
         }
       }
       document.write("</ul>")

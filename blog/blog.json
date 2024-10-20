@@ -3,32 +3,21 @@
     "- 'datePublished' needs to be formatted as dd/mm/yyyy.",
     "- the post at the top of the file will show as the most recent, and the one at the bottom will show as the oldest, etc.",
     "- every line needs to end with a comma, except for the last line under a certain section (e.g. the last line under 'comments' or 'content' won't have one and the last blog entry won't have one, etc.)",
-    "- Everything under 'content' will be output as HTML",
     "- double quotes and backslashes are considered 'special characters' in JSON and and if you want to include them inside a post, make sure to 'escape' it with \" or \\ (they will appear without the backslash before them on the site).",
     "- if any of the syntax is wrong, it won't work. If you need a reference for it, look here https://www.w3schools.com/js/js_json_syntax.asp"
   ],
   blog = [
     {
       "title": "Example Blog Entry 2",
-      "entry": "example-blog-entry-2",
       "subheading": "This is another blog post",
       "datePublished": "17/10/2024",
       "categories": ["Category2", "Category3"],
-      "content": [
-        "<p>This is a paragraph.</p>",
-        "<p>This is another paragraph.</p>"
-      ]
     },
     {
       "title": "Example Blog Entry",
-      "entry": "example-blog-entry",
       "subheading": "This is a blog post",
       "datePublished": "16/10/2024",
       "categories": ["Category1", "Category2"],
-      "content": [
-        "<p>This is a paragraph.</p>",
-        "<p>This is another paragraph.</p>"
-      ]
     }
   ]
 }

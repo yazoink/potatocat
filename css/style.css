@@ -7,13 +7,13 @@
   box-sizing: border-box;
   scrollbar-color: var(--fg2) var(--bg);
   scrollbar-width: thin;
+  word-wrap: break-word;
+  font-family: terminus;
+  color: var(--fg);
 }
 
 body {
-  font-family: terminus;
   font-size: 1em;
-  color: var(--fg);
-  word-wrap: break-word;
 }
 
 ul {

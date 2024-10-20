@@ -1,9 +1,14 @@
 p {
-  padding-right: calc(var(--side-padding) + var(--scrollbar-padding));
+  padding-right: var(--side-padding);
 }
 
 .artwork {
   border: 1px solid var(--fg2);
   margin: 5px;
   width: 211px;
+}
+
+img {
+  max-width: calc(535px - calc(var(--side-padding) * 2));
+  border: 1px solid var(--fg2);
 }

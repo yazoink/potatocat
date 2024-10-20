@@ -4,22 +4,26 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/iframe.css" />
     <script src='../js/get.js'></script>
-    <script type="text/javascript" src="../json/blog.json"></script>
+    <script src='../js/include.js'></script>
+    <script type="text/javascript" src="../blog/blog.json"></script>
   </head>
   <body>
     <script>
       var i;
+      var entry;
       for (i = 0; i < blog.length; i++) {
-        if (blog[i].entry == get['entry']) {
+        entry = blog[i].title.replace(/ /g, "-");
+        entry = entry.toLowerCase();
+        if (entry == get['entry']) {
           break;
         }
       }
-      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='../index.html/nav=blog&entry=" + get['entry'] + "' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
+      document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
 
       const delay = ms => new Promise(res => setTimeout(res, ms));
 
       const copyURL = async () => {
-        url = `${window.location.hostname}/index.html?nav=blog&entry=${get['entry']}`;
+        url = `${window.location.hostname}/index.html?nav=blog&entry=${entry}`;
         navigator.clipboard.writeText(url);
         document.getElementById("copy-url").innerHTML = "&#x2398; Copied!"; 
         await delay(1000);
@@ -30,15 +34,14 @@
       document.write("<h2>" + blog[i].subheading + "</h2>");
       document.write("<p><i>" + blog[i].datePublished + "</i></p>");
       document.write("<br />");
-      for (var j = 0; j < blog[i].content.length; j++) {
-        document.write(blog[i].content[j]);
-      }
+      document.write("<div class='blog-entry-content'></div>");
       document.write("<br />");
       document.write("<p><b>Categories: </b>");
       for (var j = 0; j < blog[i].categories.length; j++) {
         document.write("<a href='../index.html?nav=blog&cat=" + blog[i].categories[j] + "' target='_top'>" + blog[i].categories[j] + "</a> ");
       }
       document.write("</p>");
+      include("../blog/posts/" + entry + ".html", ".blog-entry-content");
     </script>
     <br />
   </body>
