@@ -1,8 +1,3 @@
-const artGallery = {
-  "subheading": "this is gonna be a gallery or smth",
-  "description": "Click on images for full view."
-}
-
 const socials = [
   {
     "name": "Twitter",
