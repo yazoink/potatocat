@@ -25,7 +25,7 @@ li::marker {
 
 p, h1, h2, h3 {
   padding-left: var(--side-padding);
-  padding-right: var(--side-padding);
+  padding-right: calc(var(--side-padding) + var(--scrollbar-padding));
 }
 
 a {
