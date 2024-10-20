@@ -20,13 +20,13 @@ function dateToRSS(dateString) {
   return `${dayOfWeek}, ${dayOfMonth} ${month} ${year} ${hours}:${minutes}:${seconds} ${timezone}`;
 }
 
-function getRSS(blog) {
+function getRSS(blog, rss) {
   let rssXML = `<?xml version="1.0" encoding="UTF-8"?>
   <rss version="2.0">
   <channel>
-    <title>Potatocat</title>
+    <title>${rss.feedTitle}</title>
     <link>https://${window.location.hostname}</link>
-    <description>Potatocat's blog</description>
+    <description>${rss.feedDescription}</description>
     `;
   for (var i = 0; i < blog.length; i++) {
     var entry = blog[i].title.replace(/ /g, "-");

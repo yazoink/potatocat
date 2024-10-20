@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/iframe.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/iframe.css" />
+    <script src='../js/include.js'></script>
   </head>
   <body>
-    <h1 class='top-text'>About</h1>
-    <h2>this is gonna be the about section</h2>
-    <p>wip</p>
+    <div class='page'></div>
+    <script>
+      include("/configurations/pages/about.html", ".page");
+    </script>
     <br />
   </body>
 </html>
