@@ -6,32 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>&#10022; potatocat &#10022;</title>
     <script src='js/get.js'></script>
+    <script src='../js/include.js'></script>
   </head>
   <body>
     <script>
       get = getGET(window.location)
     </script>
     <div class='container'>
-      <div class='header'>
+      <header class='header'>
         <a href='index.html'><img class='header-img' src="images/logo.webp" /></a>
-      </div>
-      <div class='navbar'>
-        <h1 class='top-text'>Navigation</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html?nav=about">About</a></li>
-          <li><a href="index.html?nav=art">Art</a></li>
-          <li><a href="index.html?nav=blog">Blog</a></li>
-        </ul>
-        <br />
-        <h1>Socials</h1>
-        <ul>
-          <li><a href="https://twitter.com/potatowocat" target="_blank">Twitter</a></li>
-          <li><a href="https://ko-fi.com/potatocat73467" target="_blank">Ko-fi</a></li>
-        </ul>
-      </div>
+      </header>
       <div class='navbar-side'></div>
-      <div class='content'>
+      <aside class="navbar"></aside> 
+      <main class='content'>
         <iframe id="content-iframe" src="html/home.html" frameborder='0' scrolling='yes' width='535' height='545'></iframe>
         <script>
           switch(get['nav']) {
@@ -51,12 +38,13 @@
             default:
               break;
           }
+          include("html/navbar.html", ".navbar");
         </script>
-      </div>
+      </main>
       <div class='content-side'></div>
-      <div class="footer">
+      <footer class="footer">
         <p><span class='highlight1'>potatocat</span> <span class='foreground2'>&#10022;</span> <span class='highlight2'>2024</span></p>
-      </div>
+      </footer>
       <div class='content-bottom'></div>
     </div>
   </body>

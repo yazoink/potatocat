@@ -5,8 +5,10 @@ html {
 }
 
 body {
-  max-width: 1042px;
-  min-width: 1042px;
+  max-width: var(--page-width);
+  min-width: var(--page-width);
+  max-height: var(--page-height);
+  min-height: var(--page-height);
   max-height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -27,7 +29,7 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  row-gap: 10px;
+  row-gap: var(--row-gap);
 }
 
 .header {
@@ -37,7 +39,7 @@ body {
   grid-row: 1;
   display: flex;
   position: relative;
-  padding: 10px;
+  padding-left: var(--side-padding);
 }
 
 .header-img {
@@ -79,7 +81,7 @@ body {
   grid-row: 3;
   background-image: url(../images/footer.webp);
   text-align: center;
-  line-height: 45px;
+  line-height: var(--footer-height);
 }
 
 .content-bottom {
