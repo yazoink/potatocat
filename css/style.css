@@ -30,6 +30,7 @@ p, h1, h2, h3 {
 
 a {
   color: var(--h2);
+  font-weight: bold;
 }
 
 h1, h2, h3, h4 {
