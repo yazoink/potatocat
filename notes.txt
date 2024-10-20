@@ -1,6 +1,21 @@
 -------- NOTES --------
+You'll need a web server to locally preview a lot of the site properly but you 
+can still preview it with limited functionality by opening "index.html" in a 
+web browser.
+
+Idk a simple way to run a web server locally but the way I do it is with Python;
+
+With Python installed, open a terminal/command prompt window. Get the path of 
+the website folder (something like 
+"C:\Folder\Folder2\idkwherethingsareonwindows") and run: 
+"cd C:\Path\To\The\Folder", then "python3 -m http.server". After that, open a 
+web browser and go to "http://localhost".
+You can stop the server by closing the terminal.
+
 The only files you'll need to edit are in the "blog", "gallery" and 
 "configurations" folders.
+
+I would recommend using Notepad++ or VsCode for editing these files.
 
 
 ---- HTML ----
@@ -19,7 +34,7 @@ The blog posts need to be written in HTML so here's a quick reference:
   <i>italic text</i>
 
 - Bold italic text:
-  <b><i>bold itaic text</i></b>
+  <b><i>bold italic text</i></b>
 
 - Add a link:
   <a href='https://website.com'>link text</a>
