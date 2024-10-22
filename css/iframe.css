@@ -2,6 +2,11 @@
   border: 1px solid var(--fg2);
   margin: 5px;
   width: 211px;
+  transition: transform .2s;
+}
+
+.artwork:hover {
+  transform: scale(1.025);
 }
 
 .blog-img {
