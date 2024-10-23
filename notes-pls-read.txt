@@ -52,6 +52,10 @@ The blog posts need to be written in HTML so here's a quick reference:
 - Add an image:
   <img src='/path/to/image.jpg'></img>
 
+  to fit with the formatting of the website, I'd suggest wrapping images in <p>
+  tags like
+  <p><img src='/path/to/image.jpg'></img></p>
+
   for blog posts, make sure to add them to the "blog-img" class;
 
   <img src='/path/to/image.jpg' class='blog-img'></img>
@@ -144,7 +148,9 @@ To add art to the gallery:
 
 1. Put the full resolution version of the image in "/gallery/art/full"
 
-2. Put a downscaled image with the same name in "/gallery/art/thumbnails"
+2. Put a downscaled image with the same name in "/gallery/art/thumbnails". The
+   images will display at 211px wide, so I'd go with something close to that 
+   (taking into account the mouse hover zoom effect).
 
 3. Open "/gallery/gallery.js" and find the "artGalleryImages" variable:
   
