@@ -150,7 +150,9 @@ To add art to the gallery:
 
 2. Put a downscaled image with the same name in "/gallery/art/thumbnails". The
    images will display at 211px wide, so I'd go with something close to that 
-   (taking into account the mouse hover zoom effect).
+   (taking into account the mouse hover zoom effect). I also cropped the
+   thumbnails to be perfectly square because it looks cleaner. That's optional,
+   though.
 
 3. Open "/gallery/gallery.js" and find the "artGalleryImages" variable:
   
@@ -162,8 +164,8 @@ To add art to the gallery:
 
   Add the name of the image (it will display the image at the top first).
 
-You can the subtitle and text on the gallery page by changing the values under the 
-"artGallery" variable (also in "/gallery/gallery.js").
+You can the subtitle, text and number of images shown per page by changing the 
+values under the "artGallery" variable (also in "/gallery/gallery.js").
 
 
 ---- NAVBAR ----
