@@ -15,6 +15,7 @@ body {
 }
 
 .container {
+  background-image: url(../images/layout.webp);
   display: grid;
   grid-template-columns: 
     var(--left-side-width)
@@ -33,7 +34,6 @@ body {
 }
 
 .header {
-  background-image: url(../images/banner.webp);
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 1;
@@ -48,7 +48,6 @@ body {
 }
 
 .navbar {
-  background-image: url(../images/navbar.webp);
   grid-row-start: 2;
   grid-row-end: 4;
   grid-column-start: 2;
@@ -56,30 +55,23 @@ body {
 }
 
 .navbar-side {
-  background-image: url(../images/navbar-side.webp);
   grid-row: 2;
   grid-column-start: 1;
 }
 
 .content {
-  border-top: 1px solid var(--fg2);
-  border-bottom: 1px solid var(--fg2);
-  border-left: 1px solid var(--fg2);
   grid-column: 3;
   grid-row: 2;
-  background-image: url(../images/content-bg.webp);
 }
 
 .content-side {
   grid-column: 4;
   grid-row: 2;
-  background-image: url(../images/content-side.webp);
 }
 
 .footer {
   grid-column: 3;
   grid-row: 3;
-  background-image: url(../images/footer.webp);
   text-align: center;
   line-height: var(--footer-height);
 }
@@ -88,7 +80,6 @@ body {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row: 4;
-  background-image: url(../images/tiger.webp);
 }
 
 .content iframe {

@@ -15,13 +15,13 @@
   --scrollbar-width: 7px;
 
   /* ---- GRID LAYOUT ---- */
-  --row-gap: 10px;
+  --row-gap: 11px;
   --left-side-width: 157px;
   --navbar-width: 193px;
   --content-width: 535px;
   --right-side-width: 157px;
   --header-height: 252px;
-  --content-height: 545px;
+  --content-height: 543px;
   --footer-height: 45px;
   --page-bottom-height: 373px;
   --page-width: calc(
