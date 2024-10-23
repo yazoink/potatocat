@@ -1,8 +1,5 @@
 @import url("style.css");
 
-html {
-}
-
 body {
   max-width: var(--page-width);
   min-width: var(--page-width);
@@ -30,7 +27,7 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  row-gap: var(--row-gap);
+  gap: var(--grid-gap);
 }
 
 .header {
@@ -40,6 +37,7 @@ body {
   display: flex;
   position: relative;
   padding-left: var(--side-padding);
+  margin: var(--border-width)
 }
 
 .header-img {
@@ -52,6 +50,7 @@ body {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
+  margin: var(--border-width)
 }
 
 .navbar-side {
@@ -62,6 +61,7 @@ body {
 .content {
   grid-column: 3;
   grid-row: 2;
+  margin: var(--border-width)
 }
 
 .content-side {
@@ -74,6 +74,7 @@ body {
   grid-row: 3;
   text-align: center;
   line-height: var(--footer-height);
+  margin: var(--border-width)
 }
 
 .content-bottom {

@@ -10,19 +10,21 @@
   /* ---- PADDING ---- */
   --side-padding: 15px;
   --top-padding: 10px;
-  --list-padding: 40px;
-  --scrollbar-padding: 3px;
-  --scrollbar-width: 7px;
+  --list-padding: 45px;
+  --scrollbar-padding: 2px;
+  --scrollbar-width: 5px;
   --heading-padding: 5px;
 
+  --border-width: 1px;
+
   /* ---- GRID LAYOUT ---- */
-  --row-gap: 11px;
-  --left-side-width: 157px;
-  --navbar-width: 193px;
-  --content-width: 535px;
+  --grid-gap: 10px;
+  --left-side-width: 162px;
+  --navbar-width: 182px;
+  --content-width: 536px;
   --right-side-width: 157px;
   --header-height: 252px;
-  --content-height: 543px;
+  --content-height: 545px;
   --footer-height: 45px;
   --page-bottom-height: 373px;
   --page-width: calc(

@@ -1,5 +1,5 @@
 .artwork {
-  border: 1px solid var(--fg2);
+  border: var(--border-width) solid var(--fg2);
   margin: 5px;
   width: 211px;
   transition: transform .2s;
@@ -16,5 +16,5 @@
     - var(--scrollbar-padding)
     - var(--scrollbar-width)
   );
-  border: 1px solid var(--fg2);
+  border: var(--border-width) solid var(--fg2);
 }

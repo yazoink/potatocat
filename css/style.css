@@ -76,10 +76,10 @@ hr {
     - var(--scrollbar-width)
     - var(--side-padding) * 2
   );
-  border-top: 1px dashed var(--fg2);
-  border-bottom: 1px dashed transparent;
-  border-left: 1px dashed transparent;
-  border-right: 1px dashed transparent;
+  border-top: var(--border-width) dashed var(--fg2);
+  border-bottom: var(--border-width) dashed transparent;
+  border-left: var(--border-width) dashed transparent;
+  border-right: var(--border-width) dashed transparent;
   margin-left: var(--side-padding);
   margin-right: calc(var(--side-padding) + var(--scrollbar-width));
 }
