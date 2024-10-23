@@ -36,8 +36,10 @@
         </ul>
       </aside> 
       <main class='content'>
+        <p id='hide' class='top-text'>Please enable Javascript to view this site.</p>
         <iframe id="content-iframe" src="html/home.html" frameborder='0' scrolling='yes' width='535' height='545'></iframe>
         <script>
+          document.getElementById("hide").innerHTML = "";
           switch(get['nav']) {
             case 'about':
               document.getElementById('content-iframe').src='html/about.html';
