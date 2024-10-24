@@ -160,8 +160,9 @@ To add art to the gallery:
 
   Add the name of the image (it will display the image at the top first).
 
-You can the subtitle, text and number of images shown per page by changing the 
-values under the "artGallery" variable (also in "/gallery/gallery.js").
+You set can the subtitle, text, number of images shown per page and whether to 
+automatically crop all the thumbnails to squares by changing the values under 
+the "artGallery" variable (also in "/gallery/gallery.js").
 
 
 ---- NAVBAR ----

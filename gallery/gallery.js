@@ -1,12 +1,14 @@
 const artGallery = {
   "subheading": "This is gonna be a gallery or smth",
   "description": "Click on images for full view.",
+  "cropThumbnails": true, // whether to crop thumbnails to perfect squares
   "maxPerPage": 6 // max images per page
 }
 
 const artGalleryImages = [
   "art1.webp",
   "art2.webp",
+  "art17.webp",
   "art3.webp",
   "art4.webp",
   "art5.webp",

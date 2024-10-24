@@ -63,7 +63,17 @@
         document.write("<a href='/gallery/art/full/" 
           + artGalleryImages[i] 
           + "' target='_blank'><img src='/gallery/art/thumbnails/" 
-          + artGalleryImages[i] + "' class='artwork'></img></a>");
+          + artGalleryImages[i] 
+          + "' class='artwork'></img></a>");
+      }
+
+      if (artGallery.cropThumbnails == true) {
+        const artworks = document.querySelectorAll('.artwork');
+
+        artworks.forEach(artwork =>{
+          artwork.style.height = "211px";
+          artwork.style.objectFit = "cover";
+        });
       }
 
       document.write(`
