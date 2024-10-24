@@ -10,8 +10,8 @@
   <body>
     <script>
       const get = getGET(parent.window.location);
-      var i;
-      var entry;
+      let i;
+      let entry;
       for (i = 0; i < blogPosts.length; i++) {
         entry = blogPosts[i].title.replace(/ /g, "-");
         entry = entry.toLowerCase();
