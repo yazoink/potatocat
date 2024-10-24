@@ -9,9 +9,6 @@
     <script type="text/javascript" src="configurations/configurations.js"></script>
   </head>
   <body>
-    <script>
-      get = getGET(window.location)
-    </script>
     <div class='container'>
       <header class='header'>
         <a href='index.html'><img class='header-img' src="images/logo.webp" /></a>
@@ -39,6 +36,7 @@
         <p id='hide' class='top-text'>Please enable Javascript to view this site.</p>
         <iframe id="content-iframe" src="html/home.html" frameborder='0' scrolling='yes' width='535' height='545'></iframe>
         <script>
+          get = getGET(window.location)
           document.getElementById("hide").style.display = 'none';
           switch(get['nav']) {
             case 'about':
