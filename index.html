@@ -40,16 +40,16 @@
           document.getElementById("hide").style.display = 'none';
           switch(get['nav']) {
             case 'about':
-              document.getElementById('content-iframe').src='html/about.html';
+              document.getElementById('content-iframe').src='iframe/about.html';
               break;
             case 'art':
-              document.getElementById('content-iframe').src='html/art.html';
+              document.getElementById('content-iframe').src='iframe/art.html';
               break;
             case 'blog':
               if ("entry" in get) {
-                document.getElementById('content-iframe').src=`html/blog-entry.html`;
+                document.getElementById('content-iframe').src=`iframe/blog-entry.html`;
               } else {
-                document.getElementById('content-iframe').src='html/blog.html';
+                document.getElementById('content-iframe').src='iframe/blog.html';
               }
               break;
             default:
