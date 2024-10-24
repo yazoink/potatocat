@@ -3,12 +3,9 @@
   <head>
     <link rel="stylesheet" href="/css/iframe.css" />
     <script src='/js/get.js'></script>
-    <script type="text/javascript" src="/blog/blog.js"></script>
+    <script src='/blog/blog.js'></script>
   </head>
   <body>
-     <script>
-      const get = getGET(parent.window.location);
-    </script>
     <h1 class='heading'>Blog</h1>
     <p>
       <script>
@@ -17,6 +14,7 @@
     </p>
     <br />
     <script>
+      const get = getGET(parent.window.location);
       if ("cat" in get) {
         document.write("<h1>" + get['cat'] + "</h1>")
         document.write("<ul>")
@@ -56,5 +54,6 @@
         document.write("<a href='../index.html?nav=blog&cat=" + categories[i] + "' target='_top'>" + categories[i] + "</a> ");
       }
     </script>
+    <br />
   </body>
 </html>

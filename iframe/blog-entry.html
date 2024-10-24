@@ -2,9 +2,10 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/iframe.css" />
-    <script src='../js/get.js'></script>
-    <script src='../js/include.js'></script>
-    <script type="text/javascript" src="../blog/blog.js"></script>
+    <script src='/js/get.js'></script>
+    <script src='/js/include.js'></script>
+    <script src='/blog/blog.js'></script>
+    <script src='/js/copy-url.js' defer></script>
   </head>
   <body>
     <script>
@@ -26,16 +27,6 @@
         document.write("<p>Blog post not found.</p>");
       } else {
         document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
-
-        const delay = ms => new Promise(res => setTimeout(res, ms));
-
-        const copyURL = async () => {
-          url = `${window.location.hostname}/index.html?nav=blog&entry=${entry}`;
-          navigator.clipboard.writeText(url);
-          document.getElementById("copy-url").innerHTML = "&#x2398; Copied!"; 
-          await delay(1000);
-          document.getElementById("copy-url").innerHTML = "&#x2398; Copy URL"; 
-        }
 
         document.write("<h1>" + blogPosts[i].title + "</h1>");
         document.write("<h2>" + blogPosts[i].subheading + "</h2>");

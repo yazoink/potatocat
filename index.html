@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>&#10022; potatocat &#10022;</title>
     <script src='js/get.js'></script>
-    <script type="text/javascript" src="configurations/configurations.js"></script>
+    <script src='configurations/configurations.js'></script>
   </head>
   <body>
     <div class='container'>
       <header class='header'>
-        <a href='index.html'><img class='header-img' src="images/logo.webp" /></a>
+        <a href='index.html'>
+          <img class='header-img' src="images/logo.webp" />
+        </a>
       </header>
       <div class='navbar-side'></div>
       <aside class="navbar">
@@ -27,29 +29,44 @@
         <ul>
           <script>
             for (let i = 0; i < socials.length; i++) {
-              document.write("<li><a href='" + socials[i].url + "' target='_blank'>" + socials[i].name + "</a></li>");
+              document.write("<li><a href='" 
+                + socials[i].url 
+                + "' target='_blank'>" 
+                + socials[i].name 
+                + "</a></li>");
             }
           </script>
         </ul>
       </aside> 
       <main class='content'>
-        <p id='hide' class='top-text'>Please enable Javascript to view this site.</p>
-        <iframe id="content-iframe" src="iframe/home.html" frameborder='0' scrolling='yes' width='535' height='545'></iframe>
+        <p id='hide' class='top-text'>
+          Please enable Javascript to view this site.
+        </p>
+        <iframe id="content-iframe" 
+          src="iframe/home.html" 
+          frameborder='0' 
+          scrolling='yes' 
+          width='535' 
+          height='545'>
+        </iframe>
         <script>
           get = getGET(window.location)
           document.getElementById("hide").style.display = 'none';
           switch(get['nav']) {
             case 'about':
-              document.getElementById('content-iframe').src='iframe/about.html';
+              document.getElementById('content-iframe')
+                .src='iframe/about.html';
               break;
             case 'art':
               document.getElementById('content-iframe').src='iframe/art.html';
               break;
             case 'blog':
               if ("entry" in get) {
-                document.getElementById('content-iframe').src=`iframe/blog-entry.html`;
+                document.getElementById('content-iframe')
+                  .src=`iframe/blog-entry.html`;
               } else {
-                document.getElementById('content-iframe').src='iframe/blog.html';
+                document.getElementById('content-iframe')
+                  .src='iframe/blog.html';
               }
               break;
             default:
@@ -59,7 +76,11 @@
       </main>
       <div class='content-side'></div>
       <footer class="footer">
-        <p><span class='highlight1'>potatocat</span> <span class='foreground2'>&#10022;</span> <span class='highlight2'>2024</span></p>
+        <p>
+          <span class='highlight1'>potatocat</span> 
+          <span class='foreground2'>&#10022;</span> 
+          <span class='highlight2'>2024</span> 
+        </p>
       </footer>
       <div class='content-bottom'></div>
     </div>
