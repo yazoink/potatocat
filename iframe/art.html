@@ -22,7 +22,7 @@
 
       if ("page" in get) {
         var currentPage = parseInt(get['page']);
-        if (currentPage < 1) {
+        if (currentPage < 1 || isNaN(get['page'])) {
           currentPage = 1;
         }
       } else {
