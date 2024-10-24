@@ -32,14 +32,13 @@
       var nextPage = currentPage + 1;
       var previousPage = currentPage - 1;
 
+      var startIndex = artGallery.maxPerPage * (currentPage - 1);
       if (startIndex >= artGalleryImages.length) {
         if (imageNum % artGallery.maxPerPage == 0) {
-          var startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGallery.maxPerPage * 2);
+          startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGallery.maxPerPage * 2);
         } else {
-          var startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGalleryImages.length % artGallery.maxPerPage);
+          startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGalleryImages.length % artGallery.maxPerPage);
         }
-      } else {
-        var startIndex = artGallery.maxPerPage * (currentPage - 1);
       }
 
       if (artGalleryImages.length - startIndex < artGallery.maxPerPage) {
