@@ -18,39 +18,39 @@
     <p class='hr'><hr /></p>
     <script>
       const get = getGET(parent.window.location)
-      let maxPages = Math.ceil(artGalleryImages.length / artGallery.maxPerPage);
+      var maxPages = Math.ceil(artGalleryImages.length / artGallery.maxPerPage);
 
       if ("page" in get) {
-        let currentPage = parseInt(get['page']);
+        var currentPage = parseInt(get['page']);
         if (currentPage < 1) {
           currentPage = 1;
         }
       } else {
-        let currentPage = 1;
+        var currentPage = 1;
       }
 
-      let nextPage = currentPage + 1;
-      let previousPage = currentPage - 1;
+      var nextPage = currentPage + 1;
+      var previousPage = currentPage - 1;
 
       if (startIndex >= artGalleryImages.length) {
         if (imageNum % artGallery.maxPerPage == 0) {
-          let startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGallery.maxPerPage * 2);
+          var startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGallery.maxPerPage * 2);
         } else {
-          let startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGalleryImages.length % artGallery.maxPerPage);
+          var startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGalleryImages.length % artGallery.maxPerPage);
         }
       } else {
-        let startIndex = artGallery.maxPerPage * (currentPage - 1);
+        var startIndex = artGallery.maxPerPage * (currentPage - 1);
       }
 
       if (artGalleryImages.length - startIndex < artGallery.maxPerPage) {
-        let endIndex = startIndex + (artGalleryImages.length - startIndex);
+        var endIndex = startIndex + (artGalleryImages.length - startIndex);
       } else {
-        let endIndex = startIndex + artGallery.maxPerPage;
+        var endIndex = startIndex + artGallery.maxPerPage;
       }
 
       document.write("<br />");
       document.write("<p class='align-center'>");
-      for (let i = startIndex; i < endIndex; i++) {
+      for (var i = startIndex; i < endIndex; i++) {
         document.write("<a href='/gallery/art/full/" + artGalleryImages[i] + "' target='_blank'><img src='/gallery/art/thumbnails/" + artGalleryImages[i] + "' class='artwork'></img></a>");
       }
 
@@ -62,7 +62,7 @@
         document.write("<a href='/index.html?nav=art&page=" + previousPage + "' target='_top'>&#8810; Previous</a> ");
       }
 
-      for (let i = 1; i <= maxPages; i++) {
+      for (var i = 1; i <= maxPages; i++) {
         if (i == currentPage) {
           document.write(i + " ");
         } else {
