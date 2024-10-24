@@ -20,5 +20,5 @@ const artGalleryImages = [
   "art13.webp",
   "art14.webp",
   "art15.webp",
-  "art16.webp"
+  "art16.webp" // every image ends in a comma except the last
 ]
