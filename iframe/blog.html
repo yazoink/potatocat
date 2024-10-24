@@ -15,23 +15,43 @@
     <br />
     <script>
       const get = getGET(parent.window.location);
+
       if ("cat" in get) {
-        document.write("<h1>" + get['cat'] + "</h1>")
-        document.write("<ul>")
+        document.write(`
+          <h1>${get['cat']}</h1>
+          <ul>`);
+
         for (let i = 0; i < blogPosts.length; i++) {
           let entry = blogPosts[i].title.replace(/ /g, "-");
           entry = entry.toLowerCase();
+
           if (blogPosts[i].categories.includes(get['cat']) == true) {
-              document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blogPosts[i].title + " - " + blogPosts[i].datePublished + "</a></li>");
+              document.write(`
+                <li>
+                  <a 
+                    href='../index.html?nav=blog&entry=${entry}' 
+                    target='_top'>
+                    ${blogPosts[i].title} - ${blogPosts[i].datePublished}
+                  </a>
+                </li>`);
           }
         }
       } else {
-        document.write("<h1>All Entries</h1>");
-        document.write("<ul>")
+        document.write(`
+          <h1>All Entries</h1>
+          <ul>`);
         for (let i = 0; i < blogPosts.length; i++) {
           let entry = blogPosts[i].title.replace(/ /g, "-");
           entry = entry.toLowerCase();
-          document.write("<li><a href='../index.html?nav=blog&entry=" + entry + "' target='_top'>" + blogPosts[i].title + " - " + blogPosts[i].datePublished + "</a></li>");
+
+          document.write(`
+            <li>
+              <a 
+                href='../index.html?nav=blog&entry=${entry}' 
+                target='_top'>
+                ${blogPosts[i].title} - ${blogPosts[i].datePublished}
+              </a>
+            </li>`);
         }
       }
       document.write("</ul>")
@@ -39,21 +59,29 @@
     <br />
     <p class='hr'><hr /></p>
     <br />
-    <p><b>Categories</b>: <a href='../index.html?nav=blog' target="_top">All Entries</a>
-    <script>
-      let categories = [];
-      for (let i = 0; i < blogPosts.length; i++) {
-        for (let j = 0; j < blogPosts[i].categories.length; j++) {
-          if (categories.includes(blogPosts[i].categories[j]) == false) {
-            categories.push(blogPosts[i].categories[j]);
-          }
-        } 
-      }
-      categories.sort();
-      for (let i = 0; i < categories.length; i++) {
-        document.write("<a href='../index.html?nav=blog&cat=" + categories[i] + "' target='_top'>" + categories[i] + "</a> ");
-      }
-    </script>
+    <p>
+      <b>Categories</b>: 
+      <a href='../index.html?nav=blog' target="_top">
+        All Entries</a> 
+      <script>
+        let categories = [];
+        for (let i = 0; i < blogPosts.length; i++) {
+          for (let j = 0; j < blogPosts[i].categories.length; j++) {
+            if (categories.includes(blogPosts[i].categories[j]) == false) {
+              categories.push(blogPosts[i].categories[j]);
+            }
+          } 
+        }
+        categories.sort();
+        for (let i = 0; i < categories.length; i++) {
+          document.write(`
+              <a 
+                href='../index.html?nav=blog&cat=${categories[i]}'
+                target='_top'>
+                ${categories[i]}</a> `);
+        }
+      </script>
+    </p>
     <br />
   </body>
 </html>

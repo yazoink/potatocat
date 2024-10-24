@@ -22,23 +22,40 @@
         }
       }
       if (found == false) {
-        document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a></p>");
-        document.write("<br />");
-        document.write("<p>Blog post not found.</p>");
+        document.write(`
+          <p class='top-text'>
+            <a href='../index.html?nav=blog' target='_top'>
+              &#11176; Back
+            </a>
+          </p>
+          <br />
+          <p>Blog post not found.</p>`);
       } else {
-        document.write("<p class='top-text'><a href='../index.html?nav=blog' target='_top'>&#11176; Back</a> <a id='copy-url' href='javascript:;' onclick='copyURL()'>&#x2398; Copy URL</a></p>");
+        document.write(`
+          <p class='top-text'>
+            <a href='../index.html?nav=blog' target='_top'>
+              &#11176; Back
+            </a> 
+            <a id='copy-url' href='javascript:;' onclick='copyURL()'>
+              &#x2398; Copy URL
+            </a>
+          </p>
+          <h1>${blogPosts[i].title}</h1>
+          <h2>${blogPosts[i].subheading}</h2>
+          <p><i>${blogPosts[i].datePublished}</i></p>
+          <br />
+          <div class='blog-entry-content'></div>
+          <br />
+          <hr />
+          <br />
+          <p><b>Categories</b>: `);
 
-        document.write("<h1>" + blogPosts[i].title + "</h1>");
-        document.write("<h2>" + blogPosts[i].subheading + "</h2>");
-        document.write("<p><i>" + blogPosts[i].datePublished + "</i></p>");
-        document.write("<br />");
-        document.write("<div class='blog-entry-content'></div>");
-        document.write("<br />");
-        document.write("<p class='hr'><hr /></p>");
-        document.write("<br />");
-        document.write("<p><b>Categories: </b>");
         for (var j = 0; j < blogPosts[i].categories.length; j++) {
-          document.write("<a href='../index.html?nav=blog&cat=" + blogPosts[i].categories[j] + "' target='_top'>" + blogPosts[i].categories[j] + "</a> ");
+          document.write("<a href='../index.html?nav=blog&cat=" 
+            + blogPosts[i].categories[j] 
+            + "' target='_top'>" 
+            + blogPosts[i].categories[j] 
+            + "</a> ");
         }
         document.write("</p>");
         include("../blog/posts/" + entry + ".html", ".blog-entry-content");

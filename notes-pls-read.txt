@@ -43,11 +43,7 @@ The blog posts need to be written in HTML so here's a quick reference:
   <a href='https://website.com' target='_blank'>link text</a>
 
 - Horizontal line across the page:
-  It's usually just 
   <hr /> 
-
-  but to make it use the site's theme use 
-  <p class='hr'><hr /></p>
 
 - Add an image:
   <img src='/path/to/image.jpg'></img>

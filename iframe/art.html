@@ -14,10 +14,11 @@
         document.write(artGallery.description);
     </script></p>
     <br />
-    <p class='hr'><hr /></p>
+    <hr />
     <script>
       const get = getGET(parent.window.location)
-      var maxPages = Math.ceil(artGalleryImages.length / artGallery.maxPerPage);
+      var maxPages = Math.ceil(artGalleryImages.length 
+        / artGallery.maxPerPage);
 
       if ("page" in get) {
         var currentPage = parseInt(get['page']);
@@ -34,9 +35,13 @@
       var startIndex = artGallery.maxPerPage * (currentPage - 1);
       if (startIndex >= artGalleryImages.length) {
         if (imageNum % artGallery.maxPerPage == 0) {
-          startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGallery.maxPerPage * 2);
+          startIndex = artGallery.maxPerPage 
+            * (artGalleryImages.length / artGallery.maxPerPage) 
+            - (artGallery.maxPerPage * 2);
         } else {
-          startIndex = artGallery.maxPerPage * (artGalleryImages.length / artGallery.maxPerPage) - (artGalleryImages.length % artGallery.maxPerPage);
+          startIndex = artGallery.maxPerPage 
+            * (artGalleryImages.length / artGallery.maxPerPage) 
+            - (artGalleryImages.length % artGallery.maxPerPage);
         }
       }
 
@@ -46,30 +51,44 @@
         var endIndex = startIndex + artGallery.maxPerPage;
       }
 
-      document.write("<br />");
-      document.write("<p class='align-center'>");
+      document.write(`
+      <br />
+        <p class='align-center'>`);
+
       for (var i = startIndex; i < endIndex; i++) {
-        document.write("<a href='/gallery/art/full/" + artGalleryImages[i] + "' target='_blank'><img src='/gallery/art/thumbnails/" + artGalleryImages[i] + "' class='artwork'></img></a>");
+        document.write("<a href='/gallery/art/full/" 
+          + artGalleryImages[i] 
+          + "' target='_blank'><img src='/gallery/art/thumbnails/" 
+          + artGalleryImages[i] + "' class='artwork'></img></a>");
       }
 
-      document.write("</p>");
-      document.write("<br />");
-      document.write("<p class='align-center'>");
+      document.write(`
+        </p>
+        <br />
+        <p class='align-center'>`);
 
       if (currentPage > 1) {
-        document.write("<a href='/index.html?nav=art&page=" + previousPage + "' target='_top'>&#8810; Previous</a> ");
+        document.write("<a href='/index.html?nav=art&page=" 
+          + previousPage 
+          + "' target='_top'>&#8810; Previous</a> ");
       }
 
       for (var i = 1; i <= maxPages; i++) {
         if (i == currentPage) {
           document.write(i + " ");
         } else {
-          document.write("<a href='/index.html?nav=art&page=" + i + "' target='_top'>" + i + "</a> ");
+          document.write("<a href='/index.html?nav=art&page=" 
+            + i 
+            + "' target='_top'>" 
+            + i 
+            + "</a> ");
         }
       }
 
       if (currentPage < maxPages) {
-          document.write("<a href='/index.html?nav=art&page=" + nextPage + "' target='_top'>Next &#8811;</a> ");
+          document.write("<a href='/index.html?nav=art&page=" 
+            + nextPage 
+            + "' target='_top'>Next &#8811;</a> ");
       }
 
       document.write("</p>");
