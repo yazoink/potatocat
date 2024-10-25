@@ -1,5 +1,5 @@
 -------- NOTES --------
-You'll need a web server to locally preview a lot of the site properly but you 
+You"ll need a web server to locally preview a lot of the site properly but you 
 can still preview it with limited functionality by opening "index.html" in a 
 web browser.
 
@@ -12,20 +12,20 @@ the website folder (something like
 web browser and go to "http://localhost".
 You can stop the server by closing the terminal.
 
-The only files you'll need to edit are in the "blog", "gallery" and 
+The only files you"ll need to edit are in the "blog", "gallery" and 
 "configurations" folders.
 
 I would recommend using Notepad++ or VsCode for editing these files.
 
 
 ---- HTML ----
-The blog posts need to be written in HTML so here's a quick reference:
+The blog posts need to be written in HTML so here"s a quick reference:
 
 - To write a paragraph:
   <p>paragraph contents</p>
 
 - Add a line break:
-  <br />
+  <br>
 
 - Make text bold:
   <b>bold text</b>
@@ -37,24 +37,24 @@ The blog posts need to be written in HTML so here's a quick reference:
   <b><i>bold italic text</i></b>
 
 - Add a link:
-  <a href='https://website.com'>link text</a>
+  <a href="https://website.com">link text</a>
 
-- Link that opens in a new tab (I always use this unless it's a navbar link):
-  <a href='https://website.com' target='_blank'>link text</a>
+- Link that opens in a new tab (I always use this unless it"s a navbar link):
+  <a href="https://website.com" target="_blank">link text</a>
 
 - Horizontal line across the page:
-  <hr /> 
+  <hr> 
 
 - Add an image:
-  <img src='/path/to/image.jpg'></img>
+  <img src="/path/to/image.jpg" alt="alt text">
 
-  to fit with the formatting of the website, I'd suggest wrapping images in <p>
+  to fit with the formatting of the website, I"d suggest wrapping images in <p>
   tags like
-  <p><img src='/path/to/image.jpg'></img></p>
+  <p><img src="/path/to/image.jpg" alt="alt text"></p>
 
   for blog posts, make sure to add them to the "blog-img" class;
 
-  <img src='/path/to/image.jpg' class='blog-img'></img>
+  <img src="/path/to/image.jpg" class="blog-img" alt="alt text">
 
   The path of the image should be from the website folder, so if "image.jpg" is 
   in the "images" folder in the "blog" folder, it would be 
@@ -62,17 +62,17 @@ The blog posts need to be written in HTML so here's a quick reference:
   
   I would also suggest sizing images down as much as you can and/or converting 
   them to WEBP to make sure they load quickly. The maximum width an image can 
-  display at in a blog post is 498px, so I'd suggest sizing it down to that.
+  display at in a blog post is 498px, so I"d suggest sizing it down to that.
 
 - Open an image in a new tab by clicking it:
-  <a href='/path/to/image.jpg' target='_blank'>
-    <img src='/path/to/image.jpg'></img>
+  <a href="/path/to/image.jpg" target="_blank">
+    <img src="/path/to/image.jpg" alt="alt text">
   </a>
 
 - Use a lower resolution image on the page, but open a higher 
   resolution image when clicked:
-  <a href='/path/to/full/resolution/image.jpg' target='_blank'>
-    <img src='/path/to/downscaled/image.jpg'></img>
+  <a href="/path/to/full/resolution/image.jpg" target="_blank">
+    <img src="/path/to/downscaled/image.jpg" alt="alt text">
   </a>
 
 - Unordered/bullet list:
@@ -117,9 +117,9 @@ To make a blog post:
     }
   ]
 
-  It's pretty self-explanatory, just add the info about the post you wanna 
+  It"s pretty self-explanatory, just add the info about the post you wanna 
   make. It reads from top-to-bottom, top being the most recent, so make sure 
-  it's at the top. Also make sure the syntax matches exactly, or else it won't 
+  it"s at the top. Also make sure the syntax matches exactly, or else it won"t 
   work.
 
   The most important things to remember when writing to that file are; 
@@ -133,7 +133,7 @@ To make a blog post:
 
 4. Write the HTML for your post in that file. There are already some examples, 
   which can safely be left there without showing up on the site, as long as 
-  they're not in "blog.js".
+  they"re not in "blog.js".
 
 To edit the text under the heading, edit the "blogDescription" variable in 
 "blog.js".
@@ -145,9 +145,9 @@ To add art to the gallery:
 1. Put the full resolution version of the image in "/gallery/art/full"
 
 2. Put a downscaled image with the same name in "/gallery/art/thumbnails". The
-   images will display at 211px wide, so I'd go with something close to that 
+   images will display at 211px wide, so I"d go with something close to that 
    (taking into account the mouse hover zoom effect). I also cropped the
-   thumbnails to be perfectly square because it looks cleaner. That's optional,
+   thumbnails to be perfectly square because it looks cleaner. That"s optional,
    though.
 
 3. Open "/gallery/gallery.js" and find the "artGalleryImages" variable:

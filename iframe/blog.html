@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/iframe.css" />
-    <script src='/js/get.js'></script>
-    <script src='/blog/blog.js'></script>
+    <link rel="stylesheet" href="/css/iframe.css">
+    <script src="/js/get.js"></script>
+    <script src="/blog/blog.js"></script>
+    <title>Blog</title>
   </head>
   <body>
-    <h1 class='heading'>Blog</h1>
+    <h1 class="heading">Blog</h1>
     <p>
       <script>
         document.write(blogDescription);
       </script>
     </p>
-    <br />
+    <br>
     <script>
       const get = getGET(parent.window.location);
 
@@ -56,14 +57,14 @@
       }
       document.write("</ul>")
     </script>
-    <br />
-    <p class='hr'><hr /></p>
-    <br />
+    <br>
+    <hr>
+    <br>
     <p>
-      <b>Categories</b>: 
-      <a href='../index.html?nav=blog' target="_top">
-        All Entries</a> 
+      <b>Categories</b>: <a href="../index.html?nav=blog" target="_top">
+        All Entries</a>
       <script>
+        document.write(" ");
         let categories = [];
         for (let i = 0; i < blogPosts.length; i++) {
           for (let j = 0; j < blogPosts[i].categories.length; j++) {
@@ -82,6 +83,6 @@
         }
       </script>
     </p>
-    <br />
+    <br>
   </body>
 </html>

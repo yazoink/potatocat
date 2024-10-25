@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <link rel="stylesheet" href="css/layout.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>&#10022; potatocat &#10022;</title>
-    <script src='js/get.js'></script>
-    <script src='configurations/configurations.js'></script>
+    <script src="js/get.js"></script>
+    <script src="configurations/configurations.js"></script>
   </head>
   <body>
-    <div class='container'>
-      <header class='header'>
-        <a href='index.html'>
-          <img class='header-img' src="images/logo.webp" />
+    <div class="container">
+      <header class="header">
+        <a href="index.html">
+          <img class="header-img" src="images/logo.webp" alt="logo">
         </a>
       </header>
-      <div class='navbar-side'></div>
+      <div class="navbar-side"></div>
       <aside class="navbar">
-        <h1 class='heading'>Navigation</h1>
+        <h1 class="heading">Navigation</h1>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html?nav=about">About</a></li>
           <li><a href="index.html?nav=art">Art</a></li>
           <li><a href="index.html?nav=blog">Blog</a></li>
         </ul>
-        <br />
+        <br>
         <h1>Socials</h1>
         <ul>
           <script>
@@ -37,18 +37,13 @@
             }
           </script>
         </ul>
-      </aside> 
-      <main class='content'>
-        <p id='hide' class='top-text'>
+      </aside>
+      <main class="content">
+        <p id="hide" class="top-text">
           Please enable Javascript to view this site.
         </p>
-        <iframe id="content-iframe" 
-          src="iframe/home.html" 
-          frameborder='0' 
-          scrolling='yes' 
-          width='535' 
-          height='545'>
-        </iframe>
+        <iframe id="content-iframe" title="content-iframe"
+          src="iframe/home.html"></iframe>
         <script>
           get = getGET(window.location)
           document.getElementById("hide").style.display = 'none';
@@ -74,15 +69,15 @@
           }
         </script>
       </main>
-      <div class='content-side'></div>
+      <div class="content-side"></div>
       <footer class="footer">
         <p>
-          <span class='highlight1'>potatocat</span> 
-          <span class='foreground2'>&#10022;</span> 
-          <span class='highlight2'>2024</span> 
+          <span class="highlight1">potatocat</span>
+          <span class="foreground2">&#10022;</span>
+          <span class="highlight2">2024</span>
         </p>
       </footer>
-      <div class='content-bottom'></div>
+      <div class="content-bottom"></div>
     </div>
   </body>
 </html>

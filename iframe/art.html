@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/iframe.css" />
-    <script src='/gallery/gallery.js'></script>
-    <script src='/js/get.js'></script>
+    <link rel="stylesheet" href="/css/iframe.css">
+    <script src="/gallery/gallery.js"></script>
+    <script src="/js/get.js"></script>
+    <title>Art</title>
   </head>
   <body>
-    <h1 class='heading'>Art</h1>
-    <h2>
-      <script>
-        document.write(artGallery.subheading);
-      </script>
-    </h2>
+    <h1 class="heading">Art</h1>
+    <h2 id="gallery-subheading">Drawings and such</h2>
+    <script>
+      document.getElementById("gallery-subheading").innerHTML = artGallery.subheading;
+    </script>
     <p>
       <script>
         document.write(artGallery.description);
       </script>
     </p>
-    <br />
-    <hr />
+    <br>
+    <hr>
     <script>
       const get = getGET(parent.window.location)
       var maxPages = Math.ceil(artGalleryImages.length 
@@ -107,6 +107,6 @@
 
       document.write("</p>");
     </script>
-    <br />
+    <br>
   </body>
 </html>
