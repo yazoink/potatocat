@@ -1,6 +1,12 @@
 const blogDescription = "This is a blog.";
 const blogPosts = [
   {
+    "title": "Mushroom",
+    "subheading": "This is another blog post again",
+    "datePublished": "25/10/2024",
+    "categories": ["Category3", "Category4", "lkdsjflskjf"]
+  },
+  {
     "title": "Example Blog Entry 2",
     "subheading": "This is another blog post",
     "datePublished": "17/10/2024",

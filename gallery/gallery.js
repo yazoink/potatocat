@@ -6,8 +6,8 @@ const artGallery = {
 }
 
 const artGalleryImages = [
-  "art1.webp",
   "art2.webp",
+  "art1.webp",
   "art17.webp",
   "art3.webp",
   "art4.webp",
