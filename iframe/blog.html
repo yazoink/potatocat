@@ -8,13 +8,10 @@
   </head>
   <body>
     <h1 class="heading">Blog</h1>
-    <p>
-      <script>
-        document.write(blogDescription);
-      </script>
-    </p>
+    <p id="blog-description">Talking about things or smth yeah</p>
     <br>
     <script>
+      document.getElementById("blog-description").innerHTML = blogDescription;
       const get = getGET(parent.window.location);
 
       if ("cat" in get) {

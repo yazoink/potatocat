@@ -1,4 +1,5 @@
-const blogDescription = "This is a blog.";
+const blogDescription = "Talking about things or smth yeah";
+
 const blogPosts = [
   {
     "title": "Mushroom",
